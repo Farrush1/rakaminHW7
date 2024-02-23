@@ -11,7 +11,7 @@ function rectangularArea (lenght, width){
 }
 
 function rectangularPerimeter (lenght,width){
-    return 2 * (lenght * width);
+    return 2 * (lenght + width);
 }
 
 module.exports = {
