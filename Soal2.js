@@ -64,11 +64,18 @@ source=9.67.116.98:8000] ceased
 03/22 08:54:53 INFO   :.....terminator: process terminated with exit code 0`
 
 fs.writeFile('Spreadsheet.txt',writeData ,(err,write)=>{
-    if(err){console.log(err)};
+    if(err){
+        console.error('An error occurred in writing data',err);
+        return
+    };
 
     console.log('Data has been writen')
+
 })
 fs.readFile('Spreadsheet.txt','utf-8',(err,write)=>{
-    if(err){console.log(err)};
+    if(err){
+        console.error("- An error occurred in reading data -",err);
+        return
+    };
     console.log('Read the data:', write)
 })
